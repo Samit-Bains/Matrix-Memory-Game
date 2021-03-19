@@ -1,0 +1,128 @@
+.turnOver {
+    width: 100%;
+    height: 100%;
+	transform-style: preserve-3d;
+	position: relative;
+	transition: 0.1s;
+	z-index: 4;
+	text-align: center;    
+}
+
+.interrupt{
+    position: absolute;
+    right:0;
+	z-index: 2;
+    opacity: 0.9;
+	height: 100%;
+	background: white;
+	width:100%;
+    top:0;
+    text-align: center;    
+}
+
+.displayAll{
+    opacity: 100;
+    z-index: 4;
+	text-align:center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tile.fliping .turnOver {
+		transform: rotateX(180deg);
+}
+	
+ .rotate{
+	 -webkit-animation: spin 1s linear;
+	 transform: rotate(90deg);
+ }
+
+@-webkit-keyframes spin {
+	0%  {-webkit-transform: rotate(0deg);}
+	50% {-webkit-transform: rotate(90deg);}	
+}
+
+.alert{
+	margin-top: 50%; 
+	font-size: 30px;
+    font-weight: bold;
+    color:red;
+    display: none;
+	text-align: center;
+}
+
+.innerButton{
+    font-size: 1000px;
+    border-radius: 4px;
+	padding: 20px 10px;
+    cursor: pointer;
+    color: black;
+   	opacity: 1;
+	
+}
+
+.backside, .face{
+	position: absolute;
+	width: 100%;
+	backface-visibility: hidden;
+	height: 100%;
+}
+
+.backside {
+	transform: rotateX(180deg);
+    background: green;
+	z-index: 2;
+}
+
+.face {
+	background: yellow;
+	transform: rotateX(0deg);
+	z-index: 2;
+
+}
+
+.createMatrix{
+	padding: 8px;
+    overflow:hidden;
+    z-index: 1;
+	text-align:center;
+    position: relative;
+}
+
+
+.tile{
+    width:89px;
+    height:89px;
+    float: right;
+    cursor: pointer;
+    margin: 1px;
+
+}
+
+.beginning p{
+    color: red;
+	font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top:50%;
+	z-index: 3;
+}
+
+.firstpage{
+    z-index: 3;
+	text-align:center;
+	position: relative;
+    font-size: 40px;
+}
+
+#leaderboard{
+	font-size:30px;
+}
+
+#restartbtn{
+	margin-left: 220px;
+}
+
+.btn-lg{
+    width: 25%;
+}
